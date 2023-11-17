@@ -1,0 +1,31 @@
+1-orm query for creating object
+
+> Employees.objects.create(name="hana",department="hr",salary=25000,email="hana@gmail.com",age=21,contact="test")
+
+2-orm query for fetching all records(retrive)
+
+>qs=Employees.objects.all()
+
+3-fetching
+>qs=Employees.objects.get(id=1)
+
+4-filtering employee records
+>qs=Employees.objects.filter(department="hr")
+>qs=Employees.objects.filter(salary__gte=50000) -- salary greater than 50000
+>qs=Employees.objects.filter(salary__lte=50000) --lessthan
+gt-greater than,lt-less than
+
+
+5-Excludinng object
+>>> qs=Employees.objects.exclude(department="hr")
+     (hr ozhike ulla vakki ullate varan)
+
+6-update
+Employees.objects.filter(id=2).update(contact="new contact",age=30)
+7-delete
+ Employees.objects.filter(id=1).delete()
+ 8-salary vache sorting
+ qs=Employees.objects.all().order_by("salary")=asce
+ qs=Employees.objects.all().order_by("-salary")=for desce
+ 8-oru table matramayi edukkan
+ .values_list("which coloum value")

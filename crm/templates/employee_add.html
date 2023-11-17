@@ -1,0 +1,16 @@
+<!-- base pg ile nav bar content varan -->
+{%extends 'base.html'%} 
+<!-- blck inte ullil aane content kodukkanam -->
+{%block body_block%}
+
+
+    <h1>ADD NEW EMPLOYEE!!!</h1>
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit">Create</button>
+        </form>
+    </div>
+
+{%endblock%}

@@ -1,0 +1,32 @@
+
+{%extends 'base.html'%} 
+{%block body_block%}
+
+    <div class="container d-flex justify-content-centre">
+        <div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+          
+                <h1> Employee Detail</h1> 
+                <div>
+                  {%if data.image%}
+                  <img src="{{data.image.url}}" alt="" width="100%">
+                  {%endif%}
+                </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Name={{data.name}}</li>
+                  <li class="list-group-item">Deptment={{data.department}}</li>
+                  <li class="list-group-item">Salary= {{data.salary}}</li>
+                  <li class="list-group-item">Email={{data.email}}</li>
+                  <li class="list-group-item">Age={{data.age}}</li>
+                  <li class="list-group-item">Contact= {{data.contact}}</li>
+                </ul>
+              </div>
+        </div>
+    </div>
+    {%endblock%}
+
+
+
+<!-- get use cheytaal forloop avishamilla -->
